@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="orderData"
+            type="com.android.based.data.myapplication.ui.model.OrderData" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        app:cardCornerRadius="@dimen/default_margin"
+        app:cardElevation="@dimen/default_margin"
+        app:contentPadding="@dimen/default_margin"
+        android:clickable="false"
+        android:focusable="false"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvItems"
+                android:clickable="false"
+                android:focusable="false"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+            <TextView
+                android:id="@+id/lblOrderId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:text="Order#"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvItems" />
+
+            <TextView
+                android:id="@+id/lblDeliveryTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:text="Delivery time:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvOrderId" />
+
+            <TextView
+                android:id="@+id/lblStoreLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:text="Store Location:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDeliveryTime" />
+
+            <TextView
+                android:id="@+id/lblDeliveryLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:text="Delivery Location:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvStoreLocation" />
+            <TextView
+                android:id="@+id/lblOrderPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:text="Total Price:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDeliveryLocation" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrierLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="right"
+                app:constraint_referenced_ids="lblOrderId,lblDeliveryTime,lblStoreLocation,lblDeliveryLocation,lblOrderPrice" />
+
+            <TextView
+                android:id="@+id/tvOrderId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin"
+                android:text="@{orderData.orderId}"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/barrierLabel"
+                app:layout_constraintTop_toTopOf="@id/lblOrderId"
+                tools:text="asdasdsa" />
+
+            <TextView
+                android:id="@+id/tvDeliveryTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvOrderId"
+                app:layout_constraintTop_toTopOf="@id/lblDeliveryTime"
+                bind:time="@{orderData}"
+                tools:text="Delivery time:" />
+
+            <TextView
+                android:id="@+id/tvStoreLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@{orderData.storeLocation}"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvOrderId"
+                app:layout_constraintTop_toTopOf="@id/lblStoreLocation"
+                tools:text="Delivery time:" />
+
+            <TextView
+                android:id="@+id/tvDeliveryLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@{orderData.deliveryLocation}"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvOrderId"
+                app:layout_constraintTop_toTopOf="@id/lblDeliveryLocation"
+                tools:text="Delivery time:" />
+            <TextView
+                android:id="@+id/tvOrderPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                totalOrderPrice="@{orderData}"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvOrderId"
+                app:layout_constraintTop_toTopOf="@id/lblOrderPrice"
+                tools:text="Delivery time:" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btReject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_reject"
+                app:rippleColor="@color/colorRedLight"
+                android:textColor="@color/colorRed"
+                android:layout_marginEnd="@dimen/default_margin"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:strokeColor="@color/colorRedLight"
+                app:layout_constraintEnd_toStartOf="@id/btAccept"
+                app:layout_constraintTop_toTopOf="@id/btAccept"
+                />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btAccept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_accept"
+                android:layout_marginTop="@dimen/default_margin"
+                app:rippleColor="@color/colorGreenLight"
+                android:textColor="@color/colorGreen"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:strokeColor="@color/colorGreenLight"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvOrderPrice"
+                />
+
+           <!-- <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                app:cardCornerRadius="@dimen/default_margin"
+                app:cardElevation="@dimen/default_elevation"
+                app:contentPadding="@dimen/default_margin"
+
+                >
+
+            </com.google.android.material.card.MaterialCardView>-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

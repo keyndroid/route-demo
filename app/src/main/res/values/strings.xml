@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Order Demo</string>
+    <string name="title_map">Order Delivery</string>
+    <string name="google_map_key">AIzaSyC4l2mmlRuKGIC6Bn7ULMZIvNVdYlOm9QQ</string>
+    <string name="google_direction_api">AIzaSyABboqBSaMQlxZlyrJDKJdY9k2f1UzxATQ</string>
+
+    <string name="err_something_wrong">Something went wrong</string>
+
+    <string name="lbl_accept">Accept</string>
+    <string name="lbl_reject">Reject</string>
+    <string name="lbl_cancel">Cancel</string>
+    <string name="ttl_reject">Reject Order</string>
+
+    <string name="ttl_accept_order">Accept Order</string>
+    <string name="ttl_reject_description">Are you sure you want to reject this order?</string>
+    <string name="lbl_confirm_time">Are you sure you want to deliver this order in %1$d %2$s?</string>
+    <string name="direction_url">https://maps.googleapis.com/maps/api/directions/json?origin=%1$s&amp;destination=%2$s&amp;key=%3$s</string>
+
+    <string name="lbl_start_trip_store">Start Trip</string>
+    <string name="lbl_arrived_store">Arrived to Store</string>
+    <string name="lbl_start_trip_destination">Go for Delivery</string>
+    <string name="lbl_arrived_destination">Complete Order</string>
+
+    <string name="msg_towards_store">Towards %1$s Store</string>
+    <string name="msg_arrived_store">Arrived At - %1$s Store</string>
+    <string name="msg_towards_destination">Towards %1$s destination</string>
+    <string name="msg_arroved_destination">Arrived At - %1$s destination</string>
+</resources>

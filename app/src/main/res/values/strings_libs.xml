@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<string name="lbl_cancel">Cancel</string>-->
+    <string name="lbl_ok">OK</string>
+    <string name="open_Settings">Open Settings</string>
+    <string name="permission_never_ask_again_message">You have permanently dined permission. Please goto settings, and allow permission.</string>
+    <string name="ttl_file_picker_option">Select option</string>
+    <string name="lbl_permission_denied_description">Permission Denied</string>
+</resources>

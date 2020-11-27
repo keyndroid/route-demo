@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_margin">8dp</dimen>
+    <dimen name="default_elevation">2dp</dimen>
+    <dimen name="success_text_size">24sp</dimen>
+</resources>

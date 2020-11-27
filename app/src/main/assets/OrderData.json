@@ -1,0 +1,83 @@
+[
+    {
+      "ItemList": [
+        {
+          "Quantity": 3,
+          "OrderName": "3⁄4’’ PVC pipe, 1ft long",
+          "PricePerUnit": 4.99
+        },
+        {
+          "Quantity": 2,
+          "OrderName": "Off mosquito repellent",
+          "PricePerUnit": 6.99
+        },
+        {
+          "Quantity": 1,
+          "OrderName": "lily plant",
+          "PricePerUnit": 15.99
+        }
+      ],
+      "OrderId": 101,
+      "DeliveryTime": 1,
+      "DeliveryTimeUnit": "Day",
+      "StoreLocation": "6850 S Fry Rd, Katy, TX 77494",
+      "DeliveryLocation": "5103 Trevors Trace Ln, Katy, TX, 77494"
+    },
+    {
+      "ItemList": [
+        {
+          "Quantity": 2,
+          "OrderName": "Philips screw drivers",
+          "PricePerUnit": 8.99
+        },
+        {
+          "Quantity": 2,
+          "OrderName": "WD40 lubricant",
+          "PricePerUnit": 8.99
+        }
+      ],
+      "OrderId": 102,
+      "DeliveryTime": 2,
+      "DeliveryTimeUnit": "Hours",
+      "StoreLocation": "6850 S Fry Rd, Katy, TX 77494",
+      "DeliveryLocation": "5103 Trevors Trace Ln, Katy, TX, 77494"
+    },
+    {
+      "ItemList": [
+        {
+          "Quantity": 50,
+          "OrderName": "Restore Bright White 3 in. x 12 in. Ceramic Subway Wall Tile",
+          "PricePerUnit": 1.99
+        },
+        {
+          "Quantity": 2,
+          "OrderName": "VersaBond Gray 50 lbs. Fortified Thin-Set Mortar",
+          "PricePerUnit": 10.99
+        },
+        {
+          "Quantity": 1,
+          "OrderName": "WD40 lubricant",
+          "PricePerUnit": 8.99
+        }
+      ],
+      "OrderId": 103,
+      "DeliveryTime": 1,
+      "DeliveryTimeUnit": "Day",
+      "StoreLocation": "670 S Rand Rd, Lake Zurich, IL 60047",
+      "DeliveryLocation": "4015 N Galesburg Ave, Arlington Heights, IL 60004"
+    },
+    {
+      "ItemList": [
+        {
+          "Quantity": 1,
+          "OrderName": "4,000/3,500-Watt Gasoline Powered Portable Generator with RV Outlet",
+          "PricePerUnit": 298.00
+        }
+      ],
+      "OrderId": 104,
+      "DeliveryTime": 2,
+      "DeliveryTimeUnit": "Hours",
+      "StoreLocation": "670 S Rand Rd, Lake Zurich, IL 60047",
+      "DeliveryLocation": "4015 N Galesburg Ave, Arlington Heights, IL 60004"
+    }
+  ]

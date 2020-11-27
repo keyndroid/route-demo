@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="itemList"
+            type="com.android.based.data.myapplication.ui.model.ItemList" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/tvItemName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="wqewqew"
+                android:text="@{itemList.orderName}"
+                android:textColor="@android:color/black"/>
+            <TextView
+                android:id="@+id/lblQty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvItemName"
+                android:text="Qty:"
+                android:layout_marginTop="@dimen/default_margin"
+                />
+
+
+            <TextView
+                android:id="@+id/tvItemQty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin"
+                app:layout_constraintStart_toEndOf="@id/lblQty"
+                app:layout_constraintTop_toTopOf="@id/lblQty"
+                tools:text="4"
+                bind:qty="@{itemList}"
+                android:textColor="@android:color/black"
+                />
+            <TextView
+                android:id="@+id/lblMultiplier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin"
+                app:layout_constraintStart_toEndOf="@id/tvItemQty"
+                app:layout_constraintTop_toTopOf="@id/lblQty"
+                android:text="x"
+                />
+            <TextView
+                android:id="@+id/tvPricePerUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin"
+                app:layout_constraintStart_toEndOf="@id/lblMultiplier"
+                app:layout_constraintTop_toTopOf="@id/lblQty"
+                tools:text="$4.00"
+                unitPrice="@{itemList}"
+                android:textColor="@android:color/black"
+                />
+            <TextView
+                android:id="@+id/tvItemPriceTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/lblQty"
+                totalPrice="@{itemList}"
+                tools:text="$200.00" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>
